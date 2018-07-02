@@ -3,6 +3,12 @@ import data from './utils/ingredients';
 export default function () {
   this.namespace = '/api';
 
+  this.get('/ingredients/:id', function (db, request) {
+    return {
+      data: data.find(i => i.id === parseInt(request.params.id))
+    }
+  })
+
   this.get('/ingredients', function (db, request) {
     const query = request.queryParams.name;
     if (query !== undefined) {
