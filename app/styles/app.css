@@ -1,3 +1,8 @@
+:root {
+  --blue: #142B6F;
+  --input-background: whitesmoke;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -40,8 +45,8 @@ ul{
 input,
 textarea,
 select {
-  background: whitesmoke;
-  border: 1px solid darkblue;
+  background: var(--input-background);
+  border: 1px solid var(--blue);
   border-radius: 5px;
   border-style: outset;
   font-family: 'Courier New', Courier, monospace;
@@ -78,16 +83,26 @@ select:focus {
 }
 
 .ingredients-item {
-  padding: .5rem 1rem;
-  border: 1px solid darkblue;
+  border: 1px solid var(--blue);
   border-left-width: 0px;
   border-bottom-width: 0px;
-  display:flex;
-  align-items: center;
-  justify-content: space-around;
 }
 .ingredients-item:last-of-type {
   border-bottom-width: 1px;
+}
+.ingredients-item.active {
+  background-color: var(--blue);
+  color: white;
+}
+.ingredients-item .ingredient-link {
+  align-items: center;
+  display:flex;
+  flex: 1;
+  height: 100%;
+  justify-content: space-around;
+  padding: .5rem 1rem;
+  width: 100%;
+
 }
 .ingredient-detail {
   flex:1

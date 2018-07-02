@@ -8,6 +8,7 @@ const Router = EmberRouter.extend({
 
 Router.map(function () {
   this.route('ingredients', function () {
+    this.route('new');
     this.route('detail', { path: '/:id' });
   });
 });

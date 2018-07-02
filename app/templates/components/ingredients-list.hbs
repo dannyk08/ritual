@@ -1,9 +1,14 @@
 <ul class="ingredients-list">
   {{#each ingredients as |ingredient|}}
-    {{ingredients-item ingredient=ingredient tagName="li" class="ingredients-item" }}
+    {{#link-to "ingredients.detail" ingredient tagName="li" class="ingredients-item"}}
+      {{ingredients-item ingredient=ingredient tagName="a" class="ingredient-link"}}
+    {{/link-to}}
   {{/each}}
-  <li class="ingredients-item">
-    <p>{{inline-svg "/assets/icons/add.svg"}}</p>
-    <p>add new ingredient</p>
-  </li>
+
+  {{#link-to "ingredients.new" tagName="li" class="ingredients-item"}}
+    <a href={{view.href}} class="ingredient-link">
+      <p>{{inline-svg "/assets/icons/add.svg"}}</p>
+      <p>add new ingredient</p>
+    </a>
+  {{/link-to}}
 </ul>
