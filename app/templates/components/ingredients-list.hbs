@@ -1,0 +1,8 @@
+<ul class="ingredients-list">
+  {{#each ingredients as |ingredient|}}
+    {{ingredients-item ingredient=ingredient tagName="li" class="ingredients-item" }}
+  {{/each}}
+  <li class="ingredients-item">
+    <p>add new ingredient</p>
+  </li>
+</ul>
