@@ -1,9 +1,15 @@
-<h3>
-  {{ingredient.attributes.name}}
-</h3>
-<p>
-  {{ingredient.attributes.dosage}}
-</p>
-<p>
-  {{ingredient.attributes.origin}}
-</p>
+<div class="ingredient-detail">
+  <h3>
+    {{ingredient.name}}
+  </h3>
+  <p>
+    {{ingredient.dosage}}
+  </p>
+  <p>
+    {{inline-svg "/assets/icons/bullet-point.svg"}}
+    {{ingredient.origin}}
+  </p>
+</div>
+<div class="ingredient-detail-fetch">
+  {{inline-svg "/assets/icons/arrow.svg"}}
+</div>

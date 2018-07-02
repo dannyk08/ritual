@@ -44,12 +44,15 @@ ul{
 .ingredients-view {
   display: flex;
   flex: 1;
-  height: 100%;
+  max-height: 100%;
+  overflow: hidden;
 }
 
 /* ingredients-sidebar */
 .ingredients-sidebar {
   width: 15rem;
+  overflow: auto;
+  padding-bottom: 1px;
 }
 
 .ingredients-item {
@@ -57,10 +60,17 @@ ul{
   border: 1px solid darkblue;
   border-left-width: 0px;
   border-bottom-width: 0px;
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
 }
 .ingredients-item:last-of-type {
   border-bottom-width: 1px;
 }
+.ingredient-detail {
+  flex:1
+}
+/* .ingredients-detail-fetch {} */
 /* end ingredients-sidebar */
 
 /* ingredients-detail-view */
