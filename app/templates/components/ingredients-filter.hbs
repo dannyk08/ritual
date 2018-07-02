@@ -1,6 +1,9 @@
-{{ input
-    value=value
-    key-up=(action 'handleFilter')
-    class=""
-    placeholder="Filter Ingredients By Name"}}
+<div class="ingredients-filter">
+  <h3 class="input-label">Filter:</h3>
+  {{ input
+      value=value
+      key-up=(action 'handleFilter')
+      class="input-value"
+      placeholder="Filter Ingredients"}}
+</div>
 {{yield results}}

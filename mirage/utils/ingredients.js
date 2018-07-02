@@ -11,15 +11,15 @@ export default [
       image: '/assets/images/folate.jpg',
       benefits: [
         {
-          icon: 'mood',
+          icon: '/assets/icons/mood.svg',
           benefit: 'mood',
         },
         {
-          icon: 'synthesis',
+          icon: '/assets/icons/dna-synthesis.svg',
           benefit: 'dna synthesis',
         },
         {
-          icon: 'brain-health',
+          icon: '/assets/icons/brain-health.svg',
           benefit: 'brain health',
         },
       ],
@@ -38,15 +38,15 @@ export default [
       image: '/assets/images/folate.jpg',
       benefits: [
         {
-          icon: 'mood',
+          icon: '/assets/icons/mood.svg',
           benefit: 'mood',
         },
         {
-          icon: 'synthesis',
+          icon: '/assets/icons/dna-synthesis.svg',
           benefit: 'dna synthesis',
         },
         {
-          icon: 'brain-health',
+          icon: '/assets/icons/brain-health.svg',
           benefit: 'brain health',
         },
       ],
@@ -65,15 +65,15 @@ export default [
       image: '/assets/images/folate.jpg',
       benefits: [
         {
-          icon: 'mood',
+          icon: '/assets/icons/mood.svg',
           benefit: 'mood',
         },
         {
-          icon: 'synthesis',
+          icon: '/assets/icons/dna-synthesis.svg',
           benefit: 'dna synthesis',
         },
         {
-          icon: 'brain-health',
+          icon: '/assets/icons/brain-health.svg',
           benefit: 'brain health',
         },
       ],
@@ -92,15 +92,15 @@ export default [
       image: '/assets/images/folate.jpg',
       benefits: [
         {
-          icon: 'mood',
+          icon: '/assets/icons/mood.svg',
           benefit: 'mood',
         },
         {
-          icon: 'synthesis',
+          icon: '/assets/icons/dna-synthesis.svg',
           benefit: 'dna synthesis',
         },
         {
-          icon: 'brain-health',
+          icon: '/assets/icons/brain-health.svg',
           benefit: 'brain health',
         },
       ],
@@ -119,15 +119,15 @@ export default [
       image: '/assets/images/folate.jpg',
       benefits: [
         {
-          icon: 'mood',
+          icon: '/assets/icons/mood.svg',
           benefit: 'mood',
         },
         {
-          icon: 'synthesis',
+          icon: '/assets/icons/dna-synthesis.svg',
           benefit: 'dna synthesis',
         },
         {
-          icon: 'brain-health',
+          icon: '/assets/icons/brain-health.svg',
           benefit: 'brain health',
         },
       ],
@@ -146,15 +146,15 @@ export default [
       image: '/assets/images/folate.jpg',
       benefits: [
         {
-          icon: 'mood',
+          icon: '/assets/icons/mood.svg',
           benefit: 'mood',
         },
         {
-          icon: 'synthesis',
+          icon: '/assets/icons/dna-synthesis.svg',
           benefit: 'dna synthesis',
         },
         {
-          icon: 'brain-health',
+          icon: '/assets/icons/brain-health.svg',
           benefit: 'brain health',
         },
       ],

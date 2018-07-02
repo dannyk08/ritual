@@ -1,1 +1,59 @@
-<h3>{{model.name}}</h3>
+<div class="ingredient-detail">
+  <div class="info-main">
+    <header class="ingredient-header">
+      <h2>{{model.name}}</h2>
+      <p>
+        <i>{{model.dosage}}</i>
+      </p>
+    </header>
+    <section class="ingredient-image-section">
+      <img src={{model.image}} alt={{model.name}}>
+    </section>
+  </div>
+
+  <div class="info-details">
+    <h4>
+      <span class="uppercased">
+        form: {{model.syntheticForm}}
+      </span>
+    </h4>
+    <h4>
+      <span class="uppercased">
+        dosage:
+      </span>
+      {{model.dosage}}
+    </h4>
+    <h4>
+      <span class="uppercased">
+        source:
+      </span>
+      {{model.origin}}
+    </h4>
+    <h4>
+      <span class="uppercased">
+        manufacturer:
+      </span>
+      {{model.manufacturer}}
+    </h4>
+  </div>
+
+  <div class="info-benefits">
+    <ul class="info-benefits-list">
+      {{#each model.benefits as |benefit|}}
+      <li class="info-benefits-list-item">
+        <p>{{inline-svg benefit.icon}}</p>
+        <h4 class="uppercased">{{benefit.benefit}}</h4>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+
+  <div class="info-foundin">
+    <h4 class="uppercased">found in</h4>
+    <p>
+      {{#each model.naturalSources as |naturalSource|}}
+        <i>{{naturalSource}}</i>,
+      {{/each}}
+    </p>
+  </div>
+</div>

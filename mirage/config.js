@@ -19,4 +19,21 @@ export default function () {
     }
     return { data };
   });
+
+  // this.post('/ingredients', function (db, request) {
+  //   // const ingredient = JSON.parse(request.requestBody).data;
+  //   console.log({ db, request });
+  //   // if (!ingredient.id) {
+  //   //   ingredient['id'] = data.length + 1;
+  //   //   ingredient.attributes['natural-sources'] = splitToArray(ingredient.attributes['natural-sources'])
+  //   //   // ingredient.attributes['benefits'] = ingredient.attributes['benefits']
+  //   //   console.log({ ingredient });
+  //   // }
+
+  //   // return db.ingredients.create(ingredient);
+  // });
 }
+
+// function splitToArray(source) {
+//   return source.split(',').map(i => i.trim());
+// }
