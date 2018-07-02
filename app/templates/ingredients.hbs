@@ -4,8 +4,9 @@
 
 <main class="ingredients-view">
   <section class="ingredients-sidebar">
-    {{ingredients-filter}}
-    {{ingredients-list ingredients=model }}
+    {{#ingredients-filter filter=(action 'filterBy') as |filteredResults|}}
+      {{ingredients-list ingredients=filteredResults }}
+    {{/ingredients-filter}}
   </section>
   <section class="ingredients-detail-view">
     <p>Single Ingredient Info</p>
