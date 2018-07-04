@@ -1,4 +1,5 @@
 import data from './utils/ingredients';
+import Ingredient from './utils/ingredients.model';
 
 export default function () {
   this.namespace = '/api';
@@ -10,6 +11,7 @@ export default function () {
   })
 
   this.get('/ingredients', function (db, request) {
+    console.log({ db });
     const query = request.queryParams.name;
     if (query !== undefined) {
       let filteredIngredients = data.filter(i => {
@@ -20,20 +22,13 @@ export default function () {
     return { data };
   });
 
-  // this.post('/ingredients', function (db, request) {
-  //   // const ingredient = JSON.parse(request.requestBody).data;
-  //   console.log({ db, request });
-  //   // if (!ingredient.id) {
-  //   //   ingredient['id'] = data.length + 1;
-  //   //   ingredient.attributes['natural-sources'] = splitToArray(ingredient.attributes['natural-sources'])
-  //   //   // ingredient.attributes['benefits'] = ingredient.attributes['benefits']
-  //   //   console.log({ ingredient });
-  //   // }
+  this.post('/ingredients', function (db, request) {
+    const parsedData = JSON.parse(request.requestBody).data;
+    const ingredient = Object.assign({}, parsedData, {
+      id: Date.now(),
+      attributes: new Ingredient(parsedData.attributes),
+    });
 
-  //   // return db.ingredients.create(ingredient);
-  // });
+    return db.ingredients.create(ingredient);
+  });
 }
-
-// function splitToArray(source) {
-//   return source.split(',').map(i => i.trim());
-// }

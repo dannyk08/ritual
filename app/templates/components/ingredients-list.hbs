@@ -6,7 +6,7 @@
   {{/each}}
 
   {{#link-to "ingredients.new" tagName="li" class="ingredients-item"}}
-    <a class="ingredient-link">
+    <a href={{view.href}} class="ingredient-link">
       <p>{{inline-svg "/assets/icons/add.svg"}}</p>
       <p>add new ingredient</p>
     </a>

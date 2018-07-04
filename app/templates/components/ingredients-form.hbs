@@ -1,0 +1,53 @@
+<form class="new-ingredient-form">
+  <div class="input-group">
+    <div class="input-label">
+      <h4>Ingredient Name:</h4>
+    </div>
+    <div class="input-value">
+      {{input value=form.name class="form-input" }}
+    </div>
+  </div>
+  <div class="input-group">
+    <div class="input-label">
+      <h4>Dosage:</h4>
+    </div>
+    <div class="input-value">
+      {{input value=form.dosage class="form-input" }}
+    </div>
+  </div>
+  <div class="input-group">
+    <div class="input-label">
+      <h4>Form:</h4>
+    </div>
+    <div class="input-value">
+      {{input value=form.syntheticForm class="form-input" }}
+    </div>
+  </div>
+  <div class="input-group">
+    <div class="input-label">
+      <h4>Source:</h4>
+    </div>
+    <div class="input-value">
+      {{input value=form.origin class="form-input" }}
+    </div>
+  </div>
+  <div class="input-group">
+    <div class="input-label">
+      <h4>Manufacturer:</h4>
+    </div>
+    <div class="input-value">
+      {{input value=form.manufacturer class="form-input" }}
+    </div>
+  </div>
+  <div class="input-group">
+    <div class="input-label">
+      <h4>Found In:</h4>
+    </div>
+    <div class="input-value">
+      {{input value=form.naturalSources class="form-input" }}
+    </div>
+  </div>
+  <div class="form-submit">
+    <button {{action 'onSubmit' form }} class="button">Save</button>
+  </div>
+</form>

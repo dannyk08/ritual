@@ -110,7 +110,7 @@ select:focus {
 
 /* ingredients-sidebar */
 .ingredients-sidebar {
-  width: 15rem;
+  min-width: 15rem;
   overflow: auto;
 }
 
