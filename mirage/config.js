@@ -1,18 +1,24 @@
-import data from './utils/ingredients';
+import staticIngredients from './utils/ingredients';
 import Ingredient from './utils/ingredients.model';
 
 export default function () {
   this.namespace = '/api';
 
   this.get('/ingredients/:id', function (db, request) {
-    return {
-      data: data.find(i => i.id === parseInt(request.params.id))
+    if (!db.ingredients.length) {
+      staticIngredients.forEach(i => db.ingredients.create(i));
     }
+
+    return { data: db.ingredients.find(request.params.id) }
   })
 
   this.get('/ingredients', function (db, request) {
-    console.log({ db });
+    if (!db.ingredients.length) {
+      staticIngredients.forEach(i => db.ingredients.create(i));
+    }
+    const data = db.ingredients.all().models;
     const query = request.queryParams.name;
+
     if (query !== undefined) {
       let filteredIngredients = data.filter(i => {
         return i.attributes.name.toLowerCase().indexOf(query.toLowerCase()) !== -1;
