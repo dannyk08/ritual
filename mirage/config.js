@@ -17,11 +17,11 @@ export default function () {
       staticIngredients.forEach(i => db.ingredients.create(i));
     }
     const data = db.ingredients.all().models;
-    const query = request.queryParams.name;
+    const queryKey = Object.keys(request.queryParams) && Object.keys(request.queryParams)[0];
 
-    if (query !== undefined) {
+    if (queryKey) {
       let filteredIngredients = data.filter(i => {
-        return i.attributes.name.toLowerCase().indexOf(query.toLowerCase()) !== -1;
+        return i.attributes[queryKey].toLowerCase().indexOf(request.queryParams[queryKey].toLowerCase()) !== -1;
       })
       return { data: filteredIngredients };
     }

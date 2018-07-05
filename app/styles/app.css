@@ -121,6 +121,7 @@ select:focus {
   padding: .5rem 1rem;
 }
 
+.ingredients-filter .input-key,
 .ingredients-filter .input-value {
   margin-bottom: 1.25rem;
 }

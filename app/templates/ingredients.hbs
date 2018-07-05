@@ -4,7 +4,7 @@
 
 <main class="ingredients-view">
   <section class="ingredients-sidebar">
-    {{#ingredients-filter filter=(action 'filterBy') as |filteredResults|}}
+    {{#ingredients-filter query=(action 'setQuery') filter=(action 'filterBy') as |filteredResults|}}
       {{ingredients-list ingredients=filteredResults }}
     {{/ingredients-filter}}
   </section>
