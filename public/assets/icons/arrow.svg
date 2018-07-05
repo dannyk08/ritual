@@ -1,10 +1,1 @@
-<svg width="14px" height="24px" viewBox="0 0 14 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Ingredient-/-List-View-/-Not-Selected" transform="translate(-237.000000, -46.000000)" fill="#142B6F">
-            <polygon id="Fill-1" transform="translate(244.000000, 58.000000) rotate(-90.000000) translate(-244.000000, -58.000000) " points="253.19996 51 244 59.702758 234.800048 51 232 53.648682 244 65 256 53.648682"></polygon>
-        </g>
-    </g>
-</svg>
+<svg height="24" viewBox="0 0 14 24" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m253.19996 51-9.19996 8.702758-9.199952-8.702758-2.800048 2.648682 12 11.351318 12-11.351318z" fill="#142b6f" fill-rule="evenodd" transform="matrix(0 -1 1 0 -51 256)"/></svg>

@@ -1,7 +1,7 @@
 <form class="new-ingredient-form">
   <div class="input-group">
     <div class="input-label">
-      <h4>Ingredient Name:</h4>
+      <h4 class="soft-blue">Ingredient Name:</h4>
     </div>
     <div class="input-value">
       {{input value=form.name class="form-input" }}
@@ -9,7 +9,15 @@
   </div>
   <div class="input-group">
     <div class="input-label">
-      <h4>Dosage:</h4>
+      <h4 class="soft-blue">Image:</h4>
+    </div>
+    <div class="input-value">
+      {{input value=form.image class="form-input" }}
+    </div>
+  </div>
+  <div class="input-group">
+    <div class="input-label">
+      <h4 class="soft-blue">Dosage:</h4>
     </div>
     <div class="input-value">
       {{input value=form.dosage class="form-input" }}
@@ -17,7 +25,7 @@
   </div>
   <div class="input-group">
     <div class="input-label">
-      <h4>Form:</h4>
+      <h4 class="soft-blue">Form:</h4>
     </div>
     <div class="input-value">
       {{input value=form.syntheticForm class="form-input" }}
@@ -25,7 +33,7 @@
   </div>
   <div class="input-group">
     <div class="input-label">
-      <h4>Source:</h4>
+      <h4 class="soft-blue">Source:</h4>
     </div>
     <div class="input-value">
       {{input value=form.origin class="form-input" }}
@@ -33,7 +41,7 @@
   </div>
   <div class="input-group">
     <div class="input-label">
-      <h4>Manufacturer:</h4>
+      <h4 class="soft-blue">Manufacturer:</h4>
     </div>
     <div class="input-value">
       {{input value=form.manufacturer class="form-input" }}
@@ -41,7 +49,7 @@
   </div>
   <div class="input-group">
     <div class="input-label">
-      <h4>Found In:</h4>
+      <h4 class="soft-blue">Found In:</h4>
     </div>
     <div class="input-value">
       {{input value=form.naturalSources class="form-input" }}

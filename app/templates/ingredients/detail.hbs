@@ -1,59 +1,62 @@
 <div class="ingredient-detail">
-  <div class="info-main">
+  <section class="info-details main-section">
     <header class="ingredient-header">
       <h2>{{model.name}}</h2>
-      <p>
+      <p class="soft-blue ingredient-subheader">
         <i>{{model.dosage}}</i>
       </p>
     </header>
-    <section class="ingredient-image-section">
-      <img src={{model.image}} alt={{model.name}}>
-    </section>
-  </div>
+    {{#if model.image}}
+      <section class="ingredient-image-section">
+        <img src={{model.image}} alt={{model.name}}>
+      </section>
+    {{/if}}
+  </section>
 
-  <div class="info-details">
-    <h4>
+  <section class="info-details general-info">
+    <h4 class="soft-blue">
       <span class="uppercased">
         form: {{model.syntheticForm}}
       </span>
     </h4>
-    <h4>
+    <h4 class="soft-blue">
       <span class="uppercased">
-        dosage:
+        dosage: {{model.dosage}}
       </span>
-      {{model.dosage}}
     </h4>
-    <h4>
+    <h4 class="soft-blue">
       <span class="uppercased">
         source:
       </span>
       {{model.origin}}
     </h4>
-    <h4>
+    <h4 class="soft-blue">
       <span class="uppercased">
         manufacturer:
       </span>
       {{model.manufacturer}}
     </h4>
-  </div>
+  </section>
+  <hr class="divider">
 
-  <div class="info-benefits">
+  <section class="info-details benefits-section">
     <ul class="info-benefits-list">
       {{#each model.benefits as |benefit|}}
       <li class="info-benefits-list-item">
         <p>{{inline-svg benefit.icon}}</p>
-        <h4 class="uppercased">{{benefit.benefit}}</h4>
+        <h4 class="uppercased soft-blue">{{benefit.benefit}}</h4>
       </li>
       {{/each}}
     </ul>
-  </div>
+  </section>
+  <hr class="divider">
 
-  <div class="info-foundin">
-    <h4 class="uppercased">found in</h4>
-    <p>
+  <section class="info-details natural-sources-section">
+    <h4 class="uppercased soft-blue">found in</h4>
+    <p class="soft-blue natural-sources-subheader">
       {{#each model.naturalSources as |naturalSource|}}
         <i>{{naturalSource}}</i>,
       {{/each}}
     </p>
-  </div>
+  </section>
 </div>

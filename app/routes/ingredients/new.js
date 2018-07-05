@@ -9,9 +9,9 @@ export default Route.extend({
       const ingredientModel = this.modelFor(this.routeName);
       const self = this;
 
-      ingredientModel.save().then(savedIngredient => {
-        self.transitionTo('ingredients.detail', savedIngredient)
-      }).catch(err => console.error({ err }))
+      ingredientModel.save()
+        .then(({ id }) => self.transitionTo('ingredients.detail', id))
+        .catch(err => console.error({ err }))
     },
     willTransition() {
       const record = this.modelFor('ingredients.new');
