@@ -306,7 +306,9 @@ select:focus {
   }
 
   .ingredients-detail-view .ingredient-header {
+    position: relative;
     width: 12.5rem;
+    z-index: 1;
   }
 
   .ingredients-detail-view .ingredient-header h2 {

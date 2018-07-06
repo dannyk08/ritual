@@ -4,13 +4,26 @@ export default Component.extend({
   value: '',
   queryType: 'name',
   queryTypes: [
-    'name',
-    'dosage',
-    'origin',
-    'manufacturer',
-    'image',
-    // 'benefits',
-    // 'naturalSources',
+    {
+      value:'name',
+      name: 'Name'
+    },
+    {
+      value:'syntheticForm',
+      name: 'Form'
+    },
+    {
+      value:'dosage',
+      name: 'Dosage'
+    },
+    {
+      value:'origin',
+      name: 'Origin'
+    },
+    {
+      value:'manufacturer',
+      name: 'Manufacturer'
+    },
   ],
   init() {
     this._super(...arguments);

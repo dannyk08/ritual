@@ -3,7 +3,7 @@
   <section>
     <select onchange={{action 'handleQuerySelect' value="target.value" }} class="input-key" >
       {{#each queryTypes as |type|}}
-        <option value={{type}}>{{type}}</option>
+        <option value={{type.value}}>{{type.name}}</option>
       {{/each}}
     </select>
   </section>
