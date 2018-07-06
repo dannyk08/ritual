@@ -3,10 +3,17 @@
 </header>
 
 <main class="ingredients-view">
-  <section class="ingredients-sidebar">
-    {{#ingredients-filter query=(action 'setQuery') filter=(action 'filterBy') as |filteredResults|}}
-      {{ingredients-list ingredients=filteredResults }}
-    {{/ingredients-filter}}
+  <section class="ingredients-sidebar overlap-sidebar {{ if fullSidebar "toggled-sidebar"}}">
+    {{#if fullSidebar}}
+      {{#ingredients-filter query=(action 'setQuery') filter=(action 'filterBy') as |filteredResults|}}
+        {{ingredients-list ingredients=filteredResults }}
+      {{/ingredients-filter}}
+    {{/if}}
+    {{#if displaySidebarToggle}}
+      <button class="overlap-sidebar-button" onclick={{action 'toggleSidebar'}}>
+        <span>{{inline-svg "/assets/icons/bars.svg"}}</span>
+      </button>
+    {{/if}}
   </section>
   <section class="ingredients-detail-view">
     {{outlet}}

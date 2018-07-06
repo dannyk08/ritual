@@ -123,13 +123,37 @@ select:focus {
   display: flex;
   flex: 1;
   max-height: 100%;
-  overflow: hidden;
 }
+
+/* overlap frame */
+.overlap-sidebar {
+  position: relative;
+}
+
+.overlap-sidebar-button {
+  position: absolute;
+  right: calc(-5rem - 1px);
+  top: 0;
+  z-index: 2;
+  color: white;
+  min-width: 5rem;
+  max-width: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* end overlap frame */
 
 /* ingredients-sidebar */
 .ingredients-sidebar {
-  min-width: 10rem;
-  overflow: auto;
+  width: 0;
+  transition: .5s ease-out;
+}
+.ingredients-sidebar.toggled-sidebar {
+  transition: .75s ease-out;
+  width: calc((100vw/3) * 2);
+  max-width: 17.5rem;
 }
 
 .ingredients-filter {
@@ -183,14 +207,12 @@ select:focus {
 .ingredient-link .ingredient-detail p {
   margin-top: -.5rem;
 }
-/* .ingredients-detail-fetch {} */
 /* end ingredients-sidebar */
 
 /* ingredients-detail-view */
 .ingredients-detail-view {
   flex: 1;
-  overflow: auto;
-  padding: 0 0 0 1rem;
+  padding: 2.25rem 0 0 1rem;
 }
 
 .ingredients-detail-view .info-main {
@@ -298,6 +320,7 @@ select:focus {
 
   .ingredients-detail-view {
     padding-left: 2.5rem;
+    padding-top: 0;
   }
 
   .ingredients-detail-view .ingredient-detail .main-section {
